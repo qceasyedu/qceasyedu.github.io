@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <title>QCEasy - Services and Products</title>
+     <title>QCEasy Mathematical Methods - Services and Products</title>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
   <!-- FullCalendar CSS and JS -->
    <script src="https://www.paypal.com/sdk/js?client-id=BAAcrJkJzvyZEA1iY49grZxUItWBWF0pQZoJfNe6uZpVqvBrC9rzwfdf3sCT2DNe7EHi95wGZX4Bv_IQcE&components=hosted-buttons&disable-funding=venmo&currency=AUD"></script>
 <style>
@@ -58,17 +58,30 @@
 </head>
 <body>
     <header>
-        <h1>QCEasy</h1>
+        <h1>QCEasy Mathematical Methods</h1>
     </header>
     <nav>
-
-		<a href="index.html">Home</a>
-        	<a href="QCEasy Physics/index.html">Physics</a>
-        	<a href="QCEasy Chemistry/index.html">Chemistry</a>
-		<a href="QCEasy Biology/index.html">Biology</a>
-        	<a href="QCEasy Mathematical Methods/index.html">Mathematical Methods</a>
- 
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+		<a href="../index.html"><button class="dropbtn">Home</button></a>
+            	<div class="dropdown-content">
+        	<a href="../QCEasy Physics/index.html">Physics</a>
+        	<a href="../QCEasy Chemistry/index.html">Chemistry</a>
+		<a href="../QCEasy Biology/index.html">Biology</a>
+        	<a href="index.html">Mathematical Methods</a>
+            </div>
+        </div>
         
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+            <button class="dropbtn">Resources</button>
+            <div class="dropdown-content">
+        	<a href="syllabus.html">Syllabus</a>
+        	<a href="definitions.html">Definitions</a>
+        	<a href="learning-goals.html">Learning Goals</a>
+        	<a href="practice-questions.html">Practice Questions</a>
+            </div>
+        </div>
         <a href="services.html">Services and Products</a>
         <a href="contact.html">Contact</a>
 
@@ -76,6 +89,7 @@
     
 </head>
 <body>
+
     <div class="container" style="float: left;">
         <h1>Services and Products</h1>
         <ul>
@@ -141,21 +155,28 @@
             </li>
         </ul>
     </div>
-    <div class="paypal-center">
+
+    <div class="paypal-center" style="display: flex;
+  flex-wrap: wrap;">
         <div id="paypal-container-GY53NJCYESBDE"></div>
     </div>
-
+    <div class="paypal-button"style="display: flex;
+  flex-wrap: wrap;">
     <script>
         paypal.HostedButtons({
             hostedButtonId: "GY53NJCYESBDE",
         }).render("#paypal-container-GY53NJCYESBDE");
     </script>
 
+</div>
+    <div class="booking-system">
 
         <h1>Book a Tutoring Session</h1>
 <!-- Google Calendar Appointment Scheduling begin -->
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zjsd0_f-C3zmfRxWPLX8m8XW51kx7ZusNeHNwYsT3CU8kOL-7sy1C0N_ySwgPUWTmx8jZakrt?gv=true" style="border: 0" width="100%" height="1000" frameborder="0"></iframe>
 <!-- end Google Calendar Appointment Scheduling -->
+
+</div>
 
 </body>
 </html>
