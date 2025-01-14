@@ -39,8 +39,397 @@
     </nav>
     <div class="container">
         <h1>Definitions</h1>
-        <p>Content coming soon...</p>
-    </div>
+<h2>Key Statistics Terms, Definitions and Explanations</h2>
+    <h1>What is a Bernoulli distribution and when should I use it?</h1>
+    <ul>
+        <li><strong>Definition:</strong> A Bernoulli distribution models a random variable with two possible outcomes: success (1) and failure (0).</li>
+        <li><strong>Probability:</strong>
+            <ul>
+                <li>P(X = 1) = p (probability of success)</li>
+                <li>P(X = 0) = 1 - p (probability of failure)</li>
+            </ul>
+        </li>
+        <li><strong>Characteristics:</strong>
+            <ul>
+                <li><strong>Mean:</strong> E(X) = p</li>
+                <li><strong>Variance:</strong> Var(X) = p(1 - p)</li>
+            </ul>
+        </li>
+        <li><strong>When to use:</strong> Use when there are only two outcomes (success/failure), such as:
+            <ul>
+                <li>Coin toss (heads/tails)</li>
+                <li>Yes/No surveys</li>
+                <li>Defective/non-defective items</li>
+            </ul>
+        </li>
+        <li><strong>Example:</strong>
+            <ul>
+                <li>Coin toss: p = 0.5 for heads, 1 - p = 0.5 for tails.</li>
+                <li>Quality control: p = 0.02 for a defective product.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>The Bernoulli distribution is ideal for modeling simple binary outcomes.</p>
+    <h1>What is a Binomial distribution and when should I use it?</h1>
+    <ul>
+        <li><strong>Definition:</strong> A Binomial distribution models the number of successes in a fixed number of independent trials of a binary experiment, with the same probability of success in each trial.</li>
+        <li><strong>Probability Mass Function (PMF):</strong>
+            <ul>
+                <li>P(X = r) = C(n, r) * p^r * (1 - p)^(n - r)</li>
+                <li>Where:</li>
+                <ul>
+                    <li>n = number of trials</li>
+                    <li>r = number of successes</li>
+                    <li>p = probability of success</li>
+                    <li>C(n, r) = binomial coefficient = n! / (r!(n - r)!)</li>
+                </ul>
+            </ul>
+        </li>
+        <li><strong>Characteristics:</strong>
+            <ul>
+                <li><strong>Mean:</strong> E(X) = n * p</li>
+                <li><strong>Variance:</strong> Var(X) = n * p * (1 - p)</li>
+            </ul>
+        </li>
+        <li><strong>When to use:</strong> Use when:
+            <ul>
+                <li>There is a fixed number of trials (n)</li>
+                <li>Each trial has two possible outcomes (success/failure)</li>
+                <li>The probability of success is constant (p)</li>
+                <li>The trials are independent</li>
+            </ul>
+        </li>
+        <li><strong>Examples:</strong>
+            <ul>
+                <li>Coin tosses: Modeling the number of heads in 10 flips of a fair coin</li>
+                <li>Quality control: Modeling the number of defective items in a sample of 50 products</li>
+                <li>Survey responses: Modeling the number of positive responses in a sample of 200 people</li>
+            </ul>
+        </li>
+    </ul>
+    <p>The Binomial distribution is ideal for modeling experiments with repeated trials that have two outcomes.</p>
+    <h1>Comparison: Bernoulli vs Binomial Distribution</h1>
+    <h2>Key Differences</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Bernoulli Distribution</th>
+                <th>Binomial Distribution</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Number of Trials</strong></td>
+                <td>1 trial</td>
+                <td>Fixed number of trials (n)</td>
+            </tr>
+            <tr>
+                <td><strong>Outcomes</strong></td>
+                <td>Two outcomes (success/failure)</td>
+                <td>Two outcomes in each trial (success/failure), modeled over n trials</td>
+            </tr>
+            <tr>
+                <td><strong>Probability</strong></td>
+                <td>Single trial probability (p)</td>
+                <td>Same probability of success (p) in each of n trials</td>
+            </tr>
+            <tr>
+                <td><strong>Random Variable</strong></td>
+                <td>Single success/failure (0 or 1)</td>
+                <td>Number of successes (r) in n trials</td>
+            </tr>
+            <tr>
+                <td><strong>Mean</strong></td>
+                <td>p</td>
+                <td>n * p</td>
+            </tr>
+            <tr>
+                <td><strong>Variance</strong></td>
+                <td>p(1 - p)</td>
+                <td>n * p * (1 - p)</td>
+            </tr>
+            <tr>
+                <td><strong>When to Use</strong></td>
+                <td>Single binary outcome (success/failure)</td>
+                <td>Multiple trials with binary outcomes (successes in n trials)</td>
+            </tr>
+            <tr>
+                <td><strong>Examples</strong></td>
+                <td>Coin toss (1 toss), yes/no survey (single respondent)</td>
+                <td>Coin tosses (multiple tosses), quality control (multiple items tested)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Summary</h2>
+    <p>The Bernoulli distribution models a single trial with two possible outcomes, whereas the Binomial distribution models the number of successes in multiple independent Bernoulli trials. While the Bernoulli distribution focuses on one trial, the Binomial distribution is used when there are several trials, all with the same probability of success.</p>
+    <h1>What is a Continuous random variable and when should I use it?</h1>
+    <p>A <strong>continuous random variable</strong> is a random variable that can take an infinite number of values within a given range. These variables are often associated with measurements like time, height, temperature, or distance. Unlike discrete random variables, which can only take specific values, continuous random variables have a continuum of possible outcomes.</p>
+
+    <h2>Key Characteristics</h2>
+    <ul>
+        <li><strong>Infinite Possible Outcomes:</strong> Continuous random variables can take any value within a specified range, such as time, weight, or temperature.</li>
+        <li><strong>Probability Density Function (PDF):</strong> The probability distribution of a continuous random variable is described using a PDF, where the probability of any exact value is zero, but the probability of a range of values is determined by the area under the curve.</li>
+        <li><strong>Cumulative Distribution Function (CDF):</strong> The CDF gives the probability that the random variable is less than or equal to a certain value.</li>
+    </ul>
+    <h1>Probability for Continuous Random Variables</h1>
+
+    <h2>Why is the probability for specific values zero and why can we calculate the probability within an interval?</h2>
+    <ul>
+        <li><strong>Specific Value Probability:</strong> For continuous random variables, the probability of a specific value is zero because there are infinitely many possible values. Mathematically, the area under the probability density function (PDF) at a single point is zero.</li>
+        <li><strong>Interval Probability:</strong> Although the probability for a specific value is zero, the probability within a range (interval) is non-zero. This probability is computed by finding the area under the PDF curve between two points.</li>
+        <li><strong>Integral of PDF:</strong> The probability of a random variable falling between two values is given by the integral of the PDF over that interval. The area under the curve between two points gives the probability for the interval.</li>
+        <li><strong>Example:</strong> For a continuous random variable like height, the probability of exactly 180 cm is zero, but the probability that the height is between 179 cm and 181 cm can be calculated and will be non-zero.</li>
+    </ul>
+
+    <p>In summary, while individual values for continuous random variables have zero probability, the probability of falling within a range (interval) is meaningful and can be calculated by integrating the PDF over that interval.</p>
+    <h1>Normal Distribution</h1>
+    <p>A <strong>normal distribution</strong> is a probability distribution that is symmetric about the mean, with a bell-shaped curve. It is widely used in statistics because many natural phenomena follow this distribution.</p>
+
+    <h2>Key Characteristics</h2>
+    <ul>
+        <li><strong>Symmetry:</strong> The distribution is symmetrical around the mean, and the left side is a mirror image of the right side.</li>
+        <li><strong>Mean, Median, Mode:</strong> In a normal distribution, the mean, median, and mode are all equal and located at the center.</li>
+        <li><strong>Bell-Shaped Curve:</strong> The graph of a normal distribution is bell-shaped, with the highest point at the mean.</li>
+        <li><strong>Standard Deviation:</strong> The spread of the distribution is determined by the standard deviation (σ). A smaller σ means a narrower distribution, and a larger σ means a wider distribution.</li>
+        <li><strong>68-95-99.7 Rule:</strong> 
+            <ul>
+                <li>68% of data falls within 1 standard deviation from the mean.</li>
+                <li>95% falls within 2 standard deviations.</li>
+                <li>99.7% falls within 3 standard deviations.</li>
+            </ul>
+        </li>
+        <li><strong>Total Area:</strong> The area under the curve represents the total probability, which equals 1 (100%).</li>
+    </ul>
+
+    <h2>When to Use a Normal Distribution</h2>
+    <ul>
+        <li><strong>Symmetric Data:</strong> Use when the data is symmetric and centered around a mean value.</li>
+        <li><strong>Large Sample Size:</strong> The central limit theorem ensures that with large samples, the distribution of sample means is normal.</li>
+        <li><strong>Natural Phenomena:</strong> Many natural phenomena, like heights and IQ scores, follow a normal distribution.</li>
+        <li><strong>Statistical Analysis:</strong> Many statistical techniques assume normality, such as t-tests and regression analysis.</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <ul>
+        <li><strong>Human Heights:</strong> Heights typically follow a normal distribution, with most people near the average height.</li>
+        <li><strong>Exam Scores:</strong> Exam scores in a large class often follow a normal distribution, with most students scoring around the average.</li>
+        <li><strong>Measurement Errors:</strong> Measurement errors in experiments often follow a normal distribution, with small errors being more common.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Normal distribution is essential for modeling natural and social phenomena. If data is symmetric and bell-shaped, it likely follows a normal distribution, and many statistical methods rely on this assumption.</p>
+
+    <h2>When to Use</h2>
+    <ul>
+        <li><strong>Range of Values:</strong> Use when the random variable can take any value within a certain range.</li>
+        <li><strong>Measurement-based Phenomena:</strong> When dealing with measured quantities, such as height, weight, or time.</li>
+        <li><strong>Precision in Data:</strong> When the data can be measured with high precision (e.g., decimals).</li>
+    </ul>
+
+    <h2>Examples</h2>
+    <ul>
+        <li><strong>Temperature:</strong> Temperature is continuous because it can take any value within a given range (e.g., 23.5°C, 23.55°C, etc.).</li>
+        <li><strong>Time Taken to Complete a Task:</strong> Time is continuous as it can be measured to any level of precision (e.g., seconds, milliseconds).</li>
+        <li><strong>Height of Individuals:</strong> Height is continuous because it can take any value within a specified range (e.g., between 140 cm and 200 cm).</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Continuous random variables are used for measurements where the data can take any value within a given range. These are modeled with probability density functions (PDFs) and are applicable in various fields like physics, engineering, and natural sciences.</p>
+    <h1>Normal Distribution and Its Uses</h1>
+    <p>A <strong>normal distribution</strong> is often used to model random variables when the data follows a symmetric, bell-shaped curve. It is suitable in the following contexts:</p>
+
+    <h2>Contexts to Use Normal Distribution</h2>
+    <ul>
+        <li><strong>Natural Phenomena:</strong> Many biological and physical traits, such as human heights, body temperatures, and blood pressure, follow a normal distribution.</li>
+        <li><strong>Measurement Errors:</strong> In scientific experiments, measurement errors are often normally distributed, with smaller errors more common than large ones.</li>
+        <li><strong>Test Scores:</strong> Large test score distributions, like in IQ tests or standardized exams, tend to follow a normal distribution.</li>
+        <li><strong>Financial Models:</strong> Stock returns and investment portfolio returns are often modeled with a normal distribution, particularly when factors are numerous and independent.</li>
+        <li><strong>Statistical Models:</strong> In regression analysis, the residuals or errors are often assumed to follow a normal distribution to facilitate hypothesis testing.</li>
+        <li><strong>Social Sciences:</strong> Psychological traits such as IQ scores and personality traits typically follow a normal distribution.</li>
+        <li><strong>Quality Control:</strong> In manufacturing, product sizes or weights often follow a normal distribution, with most products near the target specification.</li>
+        <li><strong>Central Limit Theorem:</strong> When sampling from any population, the sampling distribution of the mean will tend to follow a normal distribution, especially with large sample sizes.</li>
+    </ul>
+
+    <h2>Conclusion</h2>
+    <p>Normal distributions are used to model random variables in cases where the data is symmetric, influenced by many small, independent factors, and exhibits few extreme values. It is commonly applied in natural, social, and financial sciences, as well as in statistical analysis.</p>
+    <h1>Random Sample</h1>
+    <p>A <strong>random sample</strong> is a subset of individuals or observations selected from a larger population, where each member has an equal chance of being included. This method helps ensure that the sample is representative of the population.</p>
+
+    <h2>Key Characteristics of a Random Sample</h2>
+    <ul>
+        <li><strong>Equal Chance:</strong> Every member of the population has an equal probability of being selected.</li>
+        <li><strong>Unbiased:</strong> It eliminates selection bias and provides reliable results.</li>
+        <li><strong>Representative:</strong> The sample should reflect the characteristics of the larger population.</li>
+    </ul>
+
+    <h2>Types of Random Sampling</h2>
+    <ul>
+        <li><strong>Simple Random Sampling:</strong> Every individual is selected entirely by chance.</li>
+        <li><strong>Stratified Random Sampling:</strong> The population is divided into subgroups, and samples are taken from each.</li>
+        <li><strong>Systematic Random Sampling:</strong> Individuals are selected at regular intervals from an ordered list.</li>
+        <li><strong>Cluster Sampling:</strong> The population is divided into clusters, and a random sample of clusters is selected.</li>
+    </ul>
+
+    <h2>When to Use a Random Sample</h2>
+    <ul>
+        <li>To make inferences about a large population without surveying everyone.</li>
+        <li>To ensure fairness and minimize bias.</li>
+        <li>When using statistical methods that rely on random sampling (e.g., confidence intervals, hypothesis testing).</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>If you're conducting a survey on the effectiveness of a new product, you might randomly sample 500 customers from a pool of 10,000, ensuring each customer has an equal chance of being selected. This random sample can then be used to make generalizations about the entire customer base.</p>
+    <h1>Sample Proportion</h1>
+    <p>A <strong>sample proportion</strong> refers to the proportion of individuals in a sample that exhibit a specific characteristic or outcome. It is denoted by <code>&#x2022;p</code> and is calculated by dividing the number of successes by the total number of individuals in the sample.</p>
+
+    <h2>Formula for Sample Proportion</h2>
+    <p>The formula for the sample proportion is:</p>
+    <pre><code>&#x2022;p = x / n</code></pre>
+    <ul>
+        <li><strong>&#x2022;p:</strong> Sample proportion</li>
+        <li><strong>x:</strong> Number of successes (individuals with the characteristic of interest)</li>
+        <li><strong>n:</strong> Total number of individuals in the sample</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>If 60 out of 100 people surveyed prefer blue as their favorite color, the sample proportion of people who prefer blue is:</p>
+    <pre><code>&#x2022;p = 60 / 100 = 0.60</code></pre>
+    <p>This means 60% of the people in the sample prefer blue.</p>
+
+    <h2>When to Use Sample Proportion</h2>
+    <ul>
+        <li><strong>Estimating Population Proportion:</strong> When you're estimating the proportion of a population that has a certain characteristic.</li>
+        <li><strong>Hypothesis Testing:</strong> Used to compare a sample proportion to a hypothesized population proportion.</li>
+        <li><strong>Confidence Intervals:</strong> Used in constructing confidence intervals for population proportions.</li>
+    </ul>
+
+    <h2>Distribution of Sample Proportion</h2>
+    <p>The sample proportion follows a normal distribution when the sample size is large enough and both <code>np</code> and <code>n(1 - p)</code> are greater than 5. This ensures that the normal approximation holds.</p>
+    <h1>Approximating Normality for Sample Proportions</h1>
+    <p>You can approximate normality for sample proportions when certain conditions are met, as per the <strong>Central Limit Theorem</strong>.</p>
+
+    <h2>Conditions for Approximating Normality</h2>
+    <ul>
+        <li><strong>Large Sample Size:</strong> The sample size must be large enough:
+            <ul>
+                <li><code>n &#8226; p &#8805; 10</code></li>
+                <li><code>n &#8226; (1 - p) &#8805; 10</code></li>
+            </ul>
+            Where:
+            <ul>
+                <li><strong>n:</strong> Sample size</li>
+                <li><strong>p:</strong> Population proportion</li>
+                <li><strong>1 - p:</strong> Complement of the population proportion</li>
+            </ul>
+        </li>
+        <li><strong>Independent Sampling:</strong> The samples must be independent of each other.</li>
+    </ul>
+
+    <h2>Why These Conditions Matter</h2>
+    <ul>
+        <li><strong>n &#8226; p &#8805; 10:</strong> Ensures there are enough successes in the sample.</li>
+        <li><strong>n &#8226; (1 - p) &#8805; 10:</strong> Ensures there are enough failures in the sample.</li>
+    </ul>
+
+    <h2>Example</h2>
+    <p>Suppose you are surveying 200 people, and 40% (p = 0.4) of the population prefers a certain brand of soda. To check if normality can be approximated:</p>
+    <ul>
+        <li>Calculate <code>n &#8226; p = 200 &#8226; 0.4 = 80</code></li>
+        <li>Calculate <code>n &#8226; (1 - p) = 200 &#8226; 0.6 = 120</code></li>
+    </ul>
+    <p>Since both values are greater than 10, the normal approximation is appropriate.</p>
+
+    <h2>When Not to Use Normal Approximation</h2>
+    <ul>
+        <li>If <code>n &#8226; p</code> or <code>n &#8226; (1 - p)</code> is less than 10, use the <strong>binomial distribution</strong> instead.</li>
+    </ul>
+    <h1>What is a Confidence Interval?</h1>
+    <p>A confidence interval (CI) is a statistical tool used to estimate the range within which a population parameter (such as the mean or proportion) is likely to fall. It provides an interval estimate, rather than a single value estimate, and reflects the uncertainty associated with sampling.</p>
+    <p>The confidence level represents how certain we are that the true population parameter lies within this interval. A 90% confidence interval, for example, suggests that if we were to take 100 different samples from the population, approximately 90 of those intervals would contain the true population parameter, while 10 might not.</p>
+
+    <h2>Confidence Interval Formula for a Proportion:</h2>
+    <p>The formula for a confidence interval for a population proportion <strong>p</strong> is given by:</p>
+    <pre>CI = p̂ ± z * √(p̂(1 - p̂) / n)</pre>
+    <p>Where:</p>
+    <ul>
+        <li><strong>p̂</strong> is the sample proportion</li>
+        <li><strong>z</strong> is the z-score associated with the desired confidence level</li>
+        <li><strong>n</strong> is the sample size</li>
+    </ul>
+
+    <h2>Confidence Interval Formula for a Mean:</h2>
+    <p>The formula for a confidence interval for a population mean <strong>μ</strong> is:</p>
+    <pre>CI = x̄ ± z * (s / √n)</pre>
+    <p>Where:</p>
+    <ul>
+        <li><strong>x̄</strong> is the sample mean</li>
+        <li><strong>s</strong> is the sample standard deviation</li>
+        <li><strong>n</strong> is the sample size</li>
+        <li><strong>z</strong> is the z-score corresponding to the desired confidence level</li>
+    </ul>
+
+    <h2>Confidence Levels and Z-Scores:</h2>
+    <ul>
+        <li><strong>90% Confidence Level:</strong> The z-score is 1.645.</li>
+        <li><strong>95% Confidence Level:</strong> The z-score is 1.96.</li>
+        <li><strong>99% Confidence Level:</strong> The z-score is 2.576.</li>
+    </ul>
+    <p>These z-scores come from the standard normal distribution and represent the number of standard deviations from the mean that correspond to the desired level of confidence.</p>
+
+    <h2>Examples:</h2>
+    <h3>Example 1: 90% Confidence Interval</h3>
+    <p>Imagine you are estimating the proportion of people who prefer a certain brand of soda. You take a sample of 100 people, and 60 of them say they prefer the brand. The sample proportion is:</p>
+    <pre>p̂ = 60 / 100 = 0.60</pre>
+    <p>To construct a 90% confidence interval for the population proportion:</p>
+    <pre>CI = 0.60 ± 1.645 * √(0.60 * 0.40 / 100) = 0.60 ± 0.0804</pre>
+    <p>So, the 90% confidence interval is approximately: [0.5196, 0.6804].</p>
+
+    <h3>Example 2: 95% Confidence Interval</h3>
+    <p>Now, imagine you want to estimate the average height of students in a class. From a sample of 50 students, you find the mean height is 170 cm with a sample standard deviation of 10 cm. To construct a 95% confidence interval for the population mean:</p>
+    <pre>CI = 170 ± 1.96 * (10 / √50) = 170 ± 2.77</pre>
+    <p>So, the 95% confidence interval is: [167.23, 172.77].</p>
+
+    <h3>Example 3: 99% Confidence Interval</h3>
+    <p>Finally, let’s estimate the proportion of people who approve of a new policy. You survey 200 people, and 130 of them approve. The sample proportion is:</p>
+    <pre>p̂ = 130 / 200 = 0.65</pre>
+    <p>To construct a 99% confidence interval for the population proportion:</p>
+    <pre>CI = 0.65 ± 2.576 * √(0.65 * 0.35 / 200) = 0.65 ± 0.0870</pre>
+    <p>So, the 99% confidence interval is: [0.5630, 0.7370].</p>
+
+    <h2>Conclusion</h2>
+    <p>A confidence interval gives us a range within which we expect a population parameter to lie, with a specified level of confidence. The wider the confidence interval, the less precise the estimate, but the more confident we are that the interval contains the true parameter. The level of confidence (e.g., 90%, 95%, or 99%) determines how likely it is that the interval will capture the true population parameter.</p>
+    <h1>What is the Margin of Error?</h1>
+    <p>The margin of error is a statistic that quantifies the amount of random sampling error in a survey's results. It provides a range within which the true value of a population parameter (such as a population mean or proportion) is expected to lie, given the sample data. The margin of error is typically expressed as a plus-or-minus figure that indicates the range around the sample estimate.</p>
+
+    <h2>Relation to the Confidence Interval:</h2>
+    <p>The confidence interval (CI) is a range of values that is used to estimate the true population parameter. The margin of error is directly related to the confidence interval as it defines how wide the interval will be.</p>
+    <p>The confidence interval is constructed by adding and subtracting the margin of error from the sample estimate (e.g., sample mean or sample proportion):</p>
+    <pre>Confidence Interval = Sample Estimate ± Margin of Error</pre>
+
+    <h2>Formula for Margin of Error:</h2>
+    <p>The margin of error is calculated using the sample data and the desired confidence level (e.g., 90%, 95%, or 99%). It is influenced by the sample size, the variability in the data, and the confidence level:</p>
+    <pre>Margin of Error = z × (σ / √n)</pre>
+    <p>Where:</p>
+    <ul>
+        <li><strong>z</strong> is the z-score corresponding to the chosen confidence level (e.g., 1.96 for 95% confidence),</li>
+        <li><strong>σ</strong> is the standard deviation of the population (or an estimate from the sample),</li>
+        <li><strong>n</strong> is the sample size.</li>
+    </ul>
+
+    <h2>Example:</h2>
+    <p>For a 95% confidence level, the margin of error tells us how much we expect the sample statistic (such as a sample mean) to differ from the true population mean. If the margin of error is ±5, the confidence interval would be the sample estimate ± 5.</p>
+    <p>If a poll reports a 95% confidence interval of 50% ± 3%, the true proportion in the population is expected to fall between 47% and 53% with 95% confidence.</p>
+
+    <h2>Summary:</h2>
+    <ul>
+        <li>The margin of error is a measure of uncertainty or variability in the sample estimate.</li>
+        <li>The confidence interval is a range of values based on the sample data that is likely to contain the true population parameter.</li>
+        <li>The margin of error defines how wide the confidence interval will be, and it is based on the sample size, variability, and the chosen confidence level.</li>
+    </ul>
+</div>
+
 <footer>
     &copy; 2025 QCEasy. All rights reserved. | <a style="color:white;" href="contact.html">Contact Us</a>
 </footer>
