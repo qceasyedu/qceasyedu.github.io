@@ -50,27 +50,36 @@ nav a:hover {
     border-radius: 5px;
 }
 
-/* Dropdown Menu */
-.dropdown {
-    position: relative;  /* Position the dropdown relative to its container */
-    margin-right: 20px;   /* Space between dropdown and other elements */
-}
 
-.dropdown .dropbtn {
+
+
+.dropdown:hover .dropbtn {
     background-color: #004080;
     color: white;
-    padding: 14px 20px;
+}
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button */
+.dropbtn {
+    background-color: #004080; /* Adjust as needed */
+    color: white;
+    padding: 10px 15px;
     font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
-/* Dropdown content (hidden by default) */
+/* Dropdown content */
 .dropdown-content {
-    display: none;
+    display: none; /* Hide by default */
     position: absolute;
     background-color: #004080;
     min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -82,22 +91,21 @@ nav a:hover {
     display: block;
 }
 
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 /* Change color on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
     color: white;
 }
 
-/* Show the dropdown content when hovering */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown:hover .dropbtn {
-    background-color: #004080;
+.dropbtn:hover {
+    background-color: #3e8e41;
     color: white;
 }
-
 /* Flexbox Layout for Links */
 nav a {
     padding: 10px 15px;
@@ -183,3 +191,40 @@ footer {
     color: white;
     flex-shrink: 0; /* Ensures footer does not shrink */
 }
+/* Wrapper for the services and booking sections */
+.services-container {
+  display: flex;
+  flex-direction: column; /* Default stack vertically */
+  gap: 20px; /* Add spacing between sections */
+}
+
+/* Left Section */
+.left-section {
+  display: flex;
+  flex-direction: row; /* Stack horizontally */
+  gap: 4rem;
+  padding-left:30px;
+}
+
+/* PayPal Section */
+.paypal-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left:30px;
+}
+
+/* Bottom Section */
+.bottom-section {
+  flex: 1;
+  padding-left:30px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+}
+

@@ -6,7 +6,7 @@
 
      <title>QCEasy Biology - Services and Products</title>
     <!-- Link to the external CSS file -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../styles.css">
   <!-- FullCalendar CSS and JS -->
    <script src="https://www.paypal.com/sdk/js?client-id=BAAcrJkJzvyZEA1iY49grZxUItWBWF0pQZoJfNe6uZpVqvBrC9rzwfdf3sCT2DNe7EHi95wGZX4Bv_IQcE&components=hosted-buttons&disable-funding=venmo&currency=AUD"></script>
 <style>
@@ -55,22 +55,19 @@
     }
     </style>
 
+
 </head>
 <body>
     <header>
         <a href="index.html"><img src="QCEasyBIO.png" alt="QCEasy Logo"></a>
     </header>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-
     <nav>
         <!-- Dropdown menu -->
         <div class="dropdown">
 		<a href="../index.html"><button class="dropbtn">Home</button></a>
             	<div class="dropdown-content">
         	<a href="../QCEasy Physics/index.html">Physics</a>
-        	<a href="../QCEasy Biology/index.html">Chemistry</a>
+        	<a href="../QCEasy Chemistry/index.html">Chemistry</a>
 		<a href="index.html">Biology</a>
         	<a href="../QCEasy Mathematical Methods/index.html">Mathematical Methods</a>
             </div>
@@ -81,19 +78,26 @@
             <button class="dropbtn">Resources</button>
             <div class="dropdown-content">
         	<a href="syllabus.html">Syllabus</a>
+        	<a href="fdb.html">Formula book</a>
         	<a href="definitions.html">Definitions</a>
         	<a href="learning-goals.html">Learning Goals</a>
         	<a href="practice-questions.html">Practice Questions</a>
             </div>
         </div>
+	<a href="playlists.html">Playlists</a>
         <a href="services.html">Services and Products</a>
         <a href="contact.html">Contact</a>
 
     </nav>
+    
 </head>
 <body>
-    <div class="container" style="float: left;">
-        <h1>Services and Products</h1>
+<div class="services-container">
+  <!-- Left Section: Services and PayPal -->
+  <div class="left-section">
+    <div class="services">
+      <h2>Services and Products</h2>
+      <!-- Services List -->
         <ul>
             <li>
         <!-a href="https://buy.stripe.com/14k01u3qqbb53Ze9AB" target="_blank" style="text-decoration: none; color: inherit;"->
@@ -157,7 +161,7 @@
             </li>
         </ul>
     </div>
-    <div class="paypal-center">
+    <div class="paypal-section">
         <div id="paypal-container-GY53NJCYESBDE"></div>
     </div>
 
@@ -167,11 +171,16 @@
         }).render("#paypal-container-GY53NJCYESBDE");
     </script>
 
-<div>
-        <h1>Book a Tutoring Session</h1>
+    </div>
+  </div>
+
+  <!-- Bottom Section: Appointment Booking -->
+  <div class="bottom-section">
+    <h2>Book a Tutoring Session</h2>
 <!-- Google Calendar Appointment Scheduling begin -->
 <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3zjsd0_f-C3zmfRxWPLX8m8XW51kx7ZusNeHNwYsT3CU8kOL-7sy1C0N_ySwgPUWTmx8jZakrt?gv=true" style="border: 0" width="100%" height="1000" frameborder="0"></iframe>
 <!-- end Google Calendar Appointment Scheduling -->
+  </div>
 </div>
 <footer>
     &copy; 2025 QCEasy. All rights reserved. | <a style="color:white;" href="contact.html">Contact Us</a>

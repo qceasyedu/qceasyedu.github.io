@@ -40,7 +40,7 @@
     <div class="container">
         <h1>Definitions</h1>
 <h2>Key Statistics Terms, Definitions and Explanations</h2>
-    <h1>What is a Bernoulli distribution and when should I use it?</h1>
+    <h2>What is a Bernoulli distribution and when should I use it?</h2>
     <ul>
         <li><strong>Definition:</strong> A Bernoulli distribution models a random variable with two possible outcomes: success (1) and failure (0).</li>
         <li><strong>Probability:</strong>
@@ -70,7 +70,7 @@
         </li>
     </ul>
     <p>The Bernoulli distribution is ideal for modeling simple binary outcomes.</p>
-    <h1>What is a Binomial distribution and when should I use it?</h1>
+    <h2>What is a Binomial distribution and when should I use it?</h2>
     <ul>
         <li><strong>Definition:</strong> A Binomial distribution models the number of successes in a fixed number of independent trials of a binary experiment, with the same probability of success in each trial.</li>
         <li><strong>Probability Mass Function (PMF):</strong>
@@ -108,7 +108,7 @@
         </li>
     </ul>
     <p>The Binomial distribution is ideal for modeling experiments with repeated trials that have two outcomes.</p>
-    <h1>Comparison: Bernoulli vs Binomial Distribution</h1>
+    <h2>Comparison: Bernoulli vs Binomial Distribution</h2>
     <h2>Key Differences</h2>
     <table border="1">
         <thead>
@@ -164,7 +164,7 @@
 
     <h2>Summary</h2>
     <p>The Bernoulli distribution models a single trial with two possible outcomes, whereas the Binomial distribution models the number of successes in multiple independent Bernoulli trials. While the Bernoulli distribution focuses on one trial, the Binomial distribution is used when there are several trials, all with the same probability of success.</p>
-    <h1>What is a Continuous random variable and when should I use it?</h1>
+    <h2>What is a Continuous random variable and when should I use it?</h2>
     <p>A <strong>continuous random variable</strong> is a random variable that can take an infinite number of values within a given range. These variables are often associated with measurements like time, height, temperature, or distance. Unlike discrete random variables, which can only take specific values, continuous random variables have a continuum of possible outcomes.</p>
 
     <h2>Key Characteristics</h2>
@@ -173,7 +173,7 @@
         <li><strong>Probability Density Function (PDF):</strong> The probability distribution of a continuous random variable is described using a PDF, where the probability of any exact value is zero, but the probability of a range of values is determined by the area under the curve.</li>
         <li><strong>Cumulative Distribution Function (CDF):</strong> The CDF gives the probability that the random variable is less than or equal to a certain value.</li>
     </ul>
-    <h1>Probability for Continuous Random Variables</h1>
+    <h2>Probability for Continuous Random Variables</h2>
 
     <h2>Why is the probability for specific values zero and why can we calculate the probability within an interval?</h2>
     <ul>
@@ -184,7 +184,7 @@
     </ul>
 
     <p>In summary, while individual values for continuous random variables have zero probability, the probability of falling within a range (interval) is meaningful and can be calculated by integrating the PDF over that interval.</p>
-    <h1>Normal Distribution</h1>
+    <h2>Normal Distribution</h2>
     <p>A <strong>normal distribution</strong> is a probability distribution that is symmetric about the mean, with a bell-shaped curve. It is widely used in statistics because many natural phenomena follow this distribution.</p>
 
     <h2>Key Characteristics</h2>
@@ -237,7 +237,7 @@
 
     <h2>Conclusion</h2>
     <p>Continuous random variables are used for measurements where the data can take any value within a given range. These are modeled with probability density functions (PDFs) and are applicable in various fields like physics, engineering, and natural sciences.</p>
-    <h1>Normal Distribution and Its Uses</h1>
+    <h2>Normal Distribution and Its Uses</h2>
     <p>A <strong>normal distribution</strong> is often used to model random variables when the data follows a symmetric, bell-shaped curve. It is suitable in the following contexts:</p>
 
     <h2>Contexts to Use Normal Distribution</h2>
@@ -254,7 +254,7 @@
 
     <h2>Conclusion</h2>
     <p>Normal distributions are used to model random variables in cases where the data is symmetric, influenced by many small, independent factors, and exhibits few extreme values. It is commonly applied in natural, social, and financial sciences, as well as in statistical analysis.</p>
-    <h1>Random Sample</h1>
+    <h2>Random Sample</h2>
     <p>A <strong>random sample</strong> is a subset of individuals or observations selected from a larger population, where each member has an equal chance of being included. This method helps ensure that the sample is representative of the population.</p>
 
     <h2>Key Characteristics of a Random Sample</h2>
@@ -281,7 +281,7 @@
 
     <h2>Example</h2>
     <p>If you're conducting a survey on the effectiveness of a new product, you might randomly sample 500 customers from a pool of 10,000, ensuring each customer has an equal chance of being selected. This random sample can then be used to make generalizations about the entire customer base.</p>
-    <h1>Sample Proportion</h1>
+    <h2>Sample Proportion</h2>
     <p>A <strong>sample proportion</strong> refers to the proportion of individuals in a sample that exhibit a specific characteristic or outcome. It is denoted by <code>&#x2022;p</code> and is calculated by dividing the number of successes by the total number of individuals in the sample.</p>
 
     <h2>Formula for Sample Proportion</h2>
@@ -307,7 +307,7 @@
 
     <h2>Distribution of Sample Proportion</h2>
     <p>The sample proportion follows a normal distribution when the sample size is large enough and both <code>np</code> and <code>n(1 - p)</code> are greater than 5. This ensures that the normal approximation holds.</p>
-    <h1>Approximating Normality for Sample Proportions</h1>
+    <h2>Approximating Normality for Sample Proportions</h2>
     <p>You can approximate normality for sample proportions when certain conditions are met, as per the <strong>Central Limit Theorem</strong>.</p>
 
     <h2>Conditions for Approximating Normality</h2>
@@ -345,7 +345,7 @@
     <ul>
         <li>If <code>n &#8226; p</code> or <code>n &#8226; (1 - p)</code> is less than 10, use the <strong>binomial distribution</strong> instead.</li>
     </ul>
-    <h1>What is a Confidence Interval?</h1>
+    <h2>What is a Confidence Interval?</h2>
     <p>A confidence interval (CI) is a statistical tool used to estimate the range within which a population parameter (such as the mean or proportion) is likely to fall. It provides an interval estimate, rather than a single value estimate, and reflects the uncertainty associated with sampling.</p>
     <p>The confidence level represents how certain we are that the true population parameter lies within this interval. A 90% confidence interval, for example, suggests that if we were to take 100 different samples from the population, approximately 90 of those intervals would contain the true population parameter, while 10 might not.</p>
 
@@ -400,7 +400,7 @@
 
     <h2>Conclusion</h2>
     <p>A confidence interval gives us a range within which we expect a population parameter to lie, with a specified level of confidence. The wider the confidence interval, the less precise the estimate, but the more confident we are that the interval contains the true parameter. The level of confidence (e.g., 90%, 95%, or 99%) determines how likely it is that the interval will capture the true population parameter.</p>
-    <h1>What is the Margin of Error?</h1>
+    <h2>What is the Margin of Error?</h2>
     <p>The margin of error is a statistic that quantifies the amount of random sampling error in a survey's results. It provides a range within which the true value of a population parameter (such as a population mean or proportion) is expected to lie, given the sample data. The margin of error is typically expressed as a plus-or-minus figure that indicates the range around the sample estimate.</p>
 
     <h2>Relation to the Confidence Interval:</h2>
