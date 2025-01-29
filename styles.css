@@ -197,29 +197,15 @@ footer {
   display: flex;
   flex-direction: column; /* Default stack vertically */
   gap: 20px; /* Add spacing between sections */
+  padding: 2rem;
 }
 
-/* Left Section */
-.left-section {
-  display: flex;
-  flex-direction: row; /* Stack horizontally */
-  gap: 4rem;
-  padding-left:30px;
-}
 
-/* PayPal Section */
-.paypal-section {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left:30px;
-}
 
 /* Bottom Section */
 .bottom-section {
   flex: 1;
-  padding-left:30px;
+  padding: 2rem;
 }
 
 /* Media Query for smaller screens */
